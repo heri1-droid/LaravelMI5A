@@ -12,7 +12,10 @@ class MahasiswaController extends Controller
      */
     public function index()
     {
-        //
+        $result = Mahasiswa::all();
+
+        // Kirim data $result ke views prodi/index.blade.php
+        return view('mahasiswa.index')->with('mahasiswa', $result);
     }
 
     /**
@@ -36,7 +39,8 @@ class MahasiswaController extends Controller
      */
     public function show(Mahasiswa $mahasiswa)
     {
-        //
+        // dd($mahasiswa);
+        return view('mahasiswa.show')->with('mahasiswa', $mahasiswa);
     }
 
     /**
