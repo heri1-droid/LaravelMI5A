@@ -13,6 +13,7 @@
             </tr>
         </thead>
         <tbody>
+            <aside></aside>
             @foreach ($mahasiswa as $row)
                 <tr>
                     <td>{{ $row['npm'] }}</td>
