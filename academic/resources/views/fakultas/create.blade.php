@@ -10,11 +10,12 @@
     Nama
     <input type="text" name="nama" id="" class="form-control">
     Dekan
-    <input type="text" name="nama" id="" class="form-control">
+    <input type="text" name="dekan" id="" class="form-control">
     Singkatan
-    <input type="text" name="nama" id="" class="form-control">
+    <input type="text" name="singkatan" id="" class="form-control">
 
     <button type="submit" class="btn btn-primary">Simpan</button>
+    
 </form>
 
 @endsection

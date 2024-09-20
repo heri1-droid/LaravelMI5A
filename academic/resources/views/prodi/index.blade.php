@@ -1,8 +1,8 @@
 @extends('layouts.main')
 
 @section('content')
-<<<<<<< HEAD
      <h4>Prodi</h4>
+     <a href="{{route('prodi.create')}}" class="btn btn-primary">Tambah</a>
     <table class="table table-striped">
         <thead>
             <tr>
@@ -24,10 +24,7 @@
             @endforeach
         </tbody>
     </table>
-=======
-<h1>sassssssssss</h1>
-    @foreach ($prodi as $row)
+    {{-- @foreach ($prodi as $row)
         {{ $row['nama'] }}
-    @endforeach
->>>>>>> 318aba74dd08e00861119b93a13ea76316215792
+    @endforeach --}}
 @endsection
