@@ -8,13 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Spica Admin</title>
   <!-- base:css -->
-  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="{{url('vendors/mdi/css/materialdesignicons.min.css')}}">
+  <link rel="stylesheet" href="{{url('vendors/css/vendor.bundle.base.css')}}">
   <!-- endinject -->
   <!-- plugin css for this page -->
   <!-- End plugin css for this page -->
   <!-- inject:css -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{{url('css/style.css')}}">
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
@@ -139,8 +139,8 @@
             <span class="mdi mdi-menu"></span>
           </button>
           <div class="navbar-brand-wrapper">
-            <a class="navbar-brand brand-logo" href="index.html"><img src="images/logo.svg" alt="logo"/></a>
-            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a>
+            <a class="navbar-brand brand-logo" href="index.html"><img src="{{url('images/logo.svg')}}" alt="logo"/></a>
+            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{url('images/logo-mini.svg')}}" alt="logo"/></a>
           </div>
           <h4 class="font-weight-bold mb-0 d-none d-md-block mt-1">Welcome back, Brandon Haynes</h4>
           <ul class="navbar-nav navbar-nav-right">
@@ -156,7 +156,7 @@
                 <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
                 <a class="dropdown-item preview-item">
                   <div class="preview-thumbnail">
-                      <img src="images/faces/face4.jpg" alt="image" class="profile-pic">
+                      <img src="{{url('images/faces/face4.jpg')}}" alt="image" class="profile-pic">
                   </div>
                   <div class="preview-item-content flex-grow">
                     <h6 class="preview-subject ellipsis font-weight-normal">David Grey
@@ -168,7 +168,7 @@
                 </a>
                 <a class="dropdown-item preview-item">
                   <div class="preview-thumbnail">
-                      <img src="images/faces/face2.jpg" alt="image" class="profile-pic">
+                      <img src="{{url('images/faces/face2.jpg')}}" alt="image" class="profile-pic">
                   </div>
                   <div class="preview-item-content flex-grow">
                     <h6 class="preview-subject ellipsis font-weight-normal">Tim Cook
@@ -180,7 +180,7 @@
                 </a>
                 <a class="dropdown-item preview-item">
                   <div class="preview-thumbnail">
-                      <img src="images/faces/face3.jpg" alt="image" class="profile-pic">
+                      <img src="{{url('images/faces/face3.jpg')}}" alt="image" class="profile-pic">
                   </div>
                   <div class="preview-item-content flex-grow">
                     <h6 class="preview-subject ellipsis font-weight-normal"> Johnson
@@ -256,7 +256,7 @@
           <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item nav-profile dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                <img src="images/faces/face5.jpg" alt="profile"/>
+                <img src="{{url('images/faces/face5.jpg')}}" alt="profile"/>
                 <span class="nav-profile-name">Eleanor Richardson</span>
               </a>
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
@@ -315,15 +315,15 @@
   <!-- container-scroller -->
 
   <!-- base:js -->
-  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <script src="{{url('vendors/js/vendor.bundle.base.js')}}"></script>
   <!-- endinject -->
   <!-- Plugin js for this page-->
-  <script src="vendors/chart.js/Chart.min.js"></script>
+  <script src="{{url('vendors/chart.js/Chart.min.js')}}"></script>
   <!-- End plugin js for this page-->
   <!-- inject:js -->
-  <script src="js/off-canvas.js"></script>
-  <script src="js/hoverable-collapse.js"></script>
-  <script src="js/template.js"></script>
+  <script src="{{url('js/off-canvas.js')}}"></script>
+  <script src="{{url('js/hoverable-collapse.js')}}"></script>
+  <script src="{{url('js/template.js')}}"></script>
   <!-- endinject -->
   <!-- plugin js for this page -->
   <!-- End plugin js for this page -->
