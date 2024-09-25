@@ -361,7 +361,7 @@
         <script>
             Swal.fire({
                 title: "Berhasil",
-                text: "Data Berhasil disimpan",
+                text: "{{session('success')}}",
                 icon: "success"
             });
         </script>

@@ -2,6 +2,8 @@
 
 @section('content')
     <h4>Mahasiswa</h4>
+    
+    <a href="{{route(name: 'mahasiswa.create')}}" class="btn btn-primary">Tambah</a>
     <table class="table table-striped">
         <thead>
             <tr>

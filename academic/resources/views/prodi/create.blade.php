@@ -19,6 +19,7 @@
             <option value="{{$item['id']}}">{{$item['nama']}}</option>
         @endforeach
     </select>
+    <br><br>
     <button type="submit" class="btn btn-primary">Simpan</button>
 </form>
 
