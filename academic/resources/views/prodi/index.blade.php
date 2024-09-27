@@ -10,6 +10,8 @@
                 <th>Kaprodi</th>
                 <th>Singkatan</th>
                 <th>Fakultas</th>
+                                <th>#</th>
+
 
             </tr>
         </thead>
@@ -19,7 +21,9 @@
                     <td>{{ $row['nama'] }}</td>
                     <td>{{ $row['kaprodi'] }}</td>
                     <td>{{ $row['singkatan'] }}</td>
-                    <td>{{ $row['fakultas'] ['nama'] }}</td>
+                    <td>{{ $row['fakultas']['nama'] }}</td>
+                    <td><a href="{{url('prodi/' . $row['id'] . '/edit')}}" class="btn btn-xs btn-warning">Ubah</a></td>
+
                 </tr>
             @endforeach
         </tbody>

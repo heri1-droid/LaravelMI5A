@@ -18,9 +18,11 @@
                     <td>{{ $row['nama'] }}</td>
                     <td>{{ $row['dekan'] }}</td>
                     <td>{{ $row['singkatan'] }}</td>
-                    <td><a href="{{route('fakultas.edit', $row['id'])}}" class="btn btn-xs btn-warning">Ubah</a></td>
+                    <td><a href="{{url('fakultas/'.$row['id'].'/edit')}}" class="btn btn-xs btn-warning">Ubah</a></td>
                 </tr>
             @endforeach
         </tbody>
     </table>
 @endsection
+
+

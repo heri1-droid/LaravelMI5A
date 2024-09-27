@@ -12,8 +12,10 @@ class Fakultas extends Model
 
     protected $fillable = ['nama', 'dekan', 'singkatan'];
 
-    protected $table = 'fakultas';
+    // protected $table = 'fakultas';
 
-    protected $primaryKey = 'id';
+    // protected $primaryKey = 'id';
+// protected $fillable = ['id'];
+
 
 }
