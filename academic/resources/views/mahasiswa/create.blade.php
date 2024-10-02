@@ -22,7 +22,7 @@
     alamat
     <input type="text" name="alamat" id="" class="form-control">
     Prodi
-    <select name="prodi_id" id="">
+    <select name="prodi_id" class="form-control">
         @foreach ($prodi as $item)
             <option value="{{$item['id']}}">{{$item['nama']}}</option>
         @endforeach

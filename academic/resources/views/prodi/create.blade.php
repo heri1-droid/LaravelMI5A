@@ -14,11 +14,12 @@
     Singkatan
     <input type="text" name="singkatan" id="" class="form-control">
     Fakultas
-    <select name="fakultas_id" id="">
+    <select name="fakultas_id" class="form-control">
         @foreach ($fakultas as $item)
             <option value="{{$item['id']}}">{{$item['nama']}}</option>
         @endforeach
     </select>
+
     <br><br>
     <button type="submit" class="btn btn-primary">Simpan</button>
 </form>
