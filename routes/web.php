@@ -26,5 +26,4 @@ Route::resource('mahasiswa', MahasiswaController::class)->middleware(['auth', 'v
 
 
 
-
 require __DIR__.'/auth.php';
