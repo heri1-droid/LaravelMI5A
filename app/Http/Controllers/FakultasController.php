@@ -100,4 +100,33 @@ class FakultasController extends Controller
         $fakultas->delete();
         return redirect()->route('fakultas.index')->with('success', 'Data Fakultas berhasil dihapus');
     }
+
+     public function getFakultas(){
+        $response['data'] = Fakultas::all();
+        $response['message'] = 'List data fakultas';
+        $response['success'] = true;
+
+        return response()->json($response, 200);
+    }
+
+    public function storeFakultas(Request $request){
+        // validasi input
+        $input = $request->validate([
+            "nama"      => "required|unique:fakultas",
+            "dekan"     => "required",
+            "singkatan" => "required"
+        ]);
+
+        // simpan
+        $hasil = Fakultas::create($input);
+        if($hasil){ // jika data berhasil disimpan
+            $response['success'] = true;
+            $response['message'] = $request->nama." berhasil disimpan";
+            return response()->json($response, 201); // 201 Created
+        } else {
+            $response['success'] = false;
+            $response['message'] = $request->nama." gagal disimpan";
+            return response()->json($response, 400); // 400 Bad Request
+        }
+    }
 }
