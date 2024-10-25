@@ -16,3 +16,5 @@ Route::get('mahasiswa', [MahasiswaController::class, 'getMahasiswa']);
 
 Route::post('fakultas', [FakultasController::class, 'storeFakultas']);
 Route::post('prodi', [ProdiController::class, 'storeProdi']);
+
+Route::delete('fakultas', [FakultasController::class, 'storeFakultas']);
