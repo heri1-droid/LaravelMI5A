@@ -142,7 +142,7 @@ class FakultasController extends Controller
         } else {
             $response['success'] = false;
             $response['message'] = "Gagal Dihapus";
-            return response()->json($response, 400); // 400 Bad Request
+            return response()->json($response, 400); // 
         }
     }
 }
