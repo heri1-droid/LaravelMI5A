@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Mahasiswa extends Model
 {
-    use HasFactory, HasUuids;
+    use HasFactory;
     public function prodi(){
         return $this-> belongsTo(  Prodi::class, 'prodi_id', 'id');
     }
