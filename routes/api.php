@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FakultasController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\ProdiController;
@@ -11,16 +11,16 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::get('fakultas', [FakultasController::class, 'getFakultas']);
-Route::get('prodi', [ProdiController::class, 'getProdi']);
-Route::get('mahasiswa', [MahasiswaController::class, 'getMahasiswa']);
+Route::get('fakultas', [FakultasController::class, 'getFakultas'])->middleware('auth:sanctum');
+Route::get('prodi', [ProdiController::class, 'getProdi'])->middleware('auth:sanctum');
+Route::get('mahasiswa', [MahasiswaController::class, 'getMahasiswa'])->middleware('auth:sanctum');
 
 Route::post('fakultas', [FakultasController::class, 'storeFakultas']);
 Route::post('prodi', [ProdiController::class, 'storeProdi']);
 
 Route::delete('fakultas', [FakultasController::class, 'storeFakultas']);
 
-Route::post('register', [AuthController::class, 'register']);
+Route::post('login', [AuthController::class, 'login']);
 //Route::get('register', [AuthController::class, 'register']);
 
 
