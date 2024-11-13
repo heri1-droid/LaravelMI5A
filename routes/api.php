@@ -20,7 +20,7 @@ Route::post('prodi', [ProdiController::class, 'storeProdi']);
 
 Route::delete('fakultas', [FakultasController::class, 'storeFakultas']);
 
-Route::post('login', [AuthController::class, 'login']);
-//Route::get('register', [AuthController::class, 'register']);
+Route::post('login', [AuthController::class, 'login']);//
+//Route::get('register', [AuthController::class, 'register']);gfh
 
 
