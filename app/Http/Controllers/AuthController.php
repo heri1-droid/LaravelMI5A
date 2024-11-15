@@ -12,12 +12,19 @@ class AuthController extends Controller
         'email' => $request->email,
         'password' => $request->password
         ])) {
-            $user = Auth::user(); //ambil 
-            $success['token'] = $user->createToken('MDPApp')->plainTextToken;
-            $success['name'] = $user->name;
-            return response()->json($success, 201);
+             $user = Auth::user();
+        if($user->role == 'admin'){
+            $success['token'] = $user->createToken('MDPApp', 
+            ['create', 'read', 'update', 'delete'])->plainTextToken;
         } else {
-            return response()->json(['error' => 'Unauthorized'], 401);
+            $success['token'] = $user->createToken('MDPApp', 
+            ['read'])->plainTextToken;
         }
+        $success['name'] = $user->name;
+        return response()->json($success, 201);
+    } else {
+        return response()->json(['error' => 'Unauthorized'], 401);
+    }
+    
     }
 }
