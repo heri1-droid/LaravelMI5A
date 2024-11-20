@@ -16,9 +16,13 @@ Route::get('prodi', [ProdiController::class, 'getProdi'])->middleware('auth:sanc
 Route::get('mahasiswa', [MahasiswaController::class, 'getMahasiswa'])->middleware('auth:sanctum');
 
 Route::post('fakultas', [FakultasController::class, 'storeFakultas'])->middleware(['auth:sanctum', 'ability:create']);
+Route::put('fakultas/{id}', [FakultasController::class, 'updateFakultas'])->middleware(['auth:sanctum', 'ability:update']);
+Route::delete('fakultas/{id}', [FakultasController::class, 'destroyFakultas'])->middleware(['auth:sanctum', 'ability:delete']);
+
+
 Route::post('prodi', [ProdiController::class, 'storeProdi']);
 
-Route::delete('fakultas', [FakultasController::class, 'storeFakultas']);
+// Route::delete('fakultas', [FakultasController::class, 'storeFakultas']);
 
 Route::post('login', action: [AuthController::class, 'login']);//
 Route::post('mahasiswa', action: [MahasiswaController::class, 'storeMahasiswa'])->middleware(['auth:sanctum', 'ability:create']);//
